@@ -32,12 +32,12 @@ interface FontWeight {
 export const paddingStyle: PaddingStyle = {
   pcPadding: "40px",
   buttonPadding: "10px 15px",
-  subButtonPadding: "2px 5px",
+  subButtonPadding: "8px 8px",
 };
 
 export const colorStyle: ColorStyle = {
   mainColor: "#fff",
-  pointColor: "salmon",
+  pointColor: "#df1560",
   subFontColor: "#afafaf",
   buttonBasicColor: "#1c2024",
   buttonHoverColor: "#33363a",
@@ -67,6 +67,11 @@ ${reset}
 img {
   width: 100%;
   display: block;
+}
+
+body {
+  background-color: ${colorStyle.bgColor};
+  color: ${colorStyle.mainColor};
 }
 
 a {
