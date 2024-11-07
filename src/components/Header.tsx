@@ -3,6 +3,8 @@ import { paddingStyle } from "../GlobalStyled";
 import Logo from "./header_components/Logo";
 import Menu from "./header_components/Menu";
 import Category from "./header_components/Category";
+import SearchButton from "./header_components/SearchButton";
+import ProfileIcon from "./header_components/ProfileIcon";
 
 const Container = styled.div`
   width: 100%;
@@ -36,6 +38,8 @@ const Header = (): JSX.Element => {
       </LeftWrap>
       <RightWrap>
         <Category />
+        <SearchButton />
+        <ProfileIcon />
       </RightWrap>
     </Container>
   );
