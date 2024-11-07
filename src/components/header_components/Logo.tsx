@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { colorStyle } from "../../GlobalStyled";
 
 const Container = styled.div`
-padding-right: 50px;
+  padding-right: 50px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -15,12 +15,12 @@ padding-right: 50px;
   }
 `;
 
-const Logo = ():JSX.Element => {
-  return <Container>
-    <Link to={"/"}>
-    CHOREVIEW
-    </Link>
-  </Container>;
+const Logo = (): JSX.Element => {
+  return (
+    <Container>
+      <Link to={"/"}>CHOREVIEW</Link>
+    </Container>
+  );
 };
 
 export default Logo;

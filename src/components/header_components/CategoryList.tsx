@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { colorStyle, fontSize, fontweight, paddingStyle } from "../../GlobalStyled";
+import {
+  colorStyle,
+  fontSize,
+  fontweight,
+  paddingStyle,
+} from "../../GlobalStyled";
 
 const list: string[] = [
   "드라마",
@@ -56,15 +61,16 @@ const Container = styled.div`
   }
 `;
 
-
 const CategoryList = (): JSX.Element => {
-  return <Container>
-    {
-      list.map((data:string, index:number)=>(
-        <Link to={'#'} key={index}>{data}</Link>
-      ))
-    }
-  </Container>;
+  return (
+    <Container>
+      {list.map((data: string, index: number) => (
+        <Link to={"#"} key={index}>
+          {data}
+        </Link>
+      ))}
+    </Container>
+  );
 };
 
 export default CategoryList;

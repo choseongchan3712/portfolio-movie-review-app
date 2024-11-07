@@ -5,7 +5,7 @@ interface PaddingStyle {
   pcPadding: string;
   buttonPadding: string;
   subButtonPadding: string;
-};
+}
 
 interface ColorStyle {
   mainColor: string;
@@ -14,7 +14,7 @@ interface ColorStyle {
   buttonBasicColor: string;
   buttonHoverColor: string;
   subButtonColor: string;
-  bgColor:string;
+  bgColor: string;
 }
 
 interface FontSize {

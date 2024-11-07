@@ -20,7 +20,7 @@ const Container = styled.div`
 const LeftWrap = styled.div`
   display: flex;
   align-items: center;
-  `;
+`;
 
 const RightWrap = styled.div`
   display: flex;
