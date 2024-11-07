@@ -12,6 +12,15 @@ font-weight: ${fontweight.pcBasic};
 &:hover {
   background-color: ${colorStyle.buttonHoverColor};
 }
+&::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
 `;
 const CategoryButton= ():JSX.Element => {
   return <Container>

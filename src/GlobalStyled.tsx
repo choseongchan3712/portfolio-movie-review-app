@@ -31,7 +31,7 @@ interface FontWeight {
 
 export const paddingStyle: PaddingStyle = {
   pcPadding: "40px",
-  buttonPadding: "10px 15px",
+  buttonPadding: "12px 15px",
   subButtonPadding: "8px 8px",
 };
 
