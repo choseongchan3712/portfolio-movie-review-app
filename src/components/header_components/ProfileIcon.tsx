@@ -19,6 +19,9 @@ border-radius: 5px;
     border-radius: 50%;
   }
 }
+@media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const ProfileIcon = (): JSX.Element => {

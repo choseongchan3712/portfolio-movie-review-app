@@ -13,6 +13,15 @@ const Container = styled.div`
     text-decoration: none;
     color: ${colorStyle.pointColor};
   }
+  @media screen and (max-width: 1024px) {
+    padding-right: 20px;
+    a {
+      font-size: 25px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    padding-right: 15px;
+  }
 `;
 
 const Logo = (): JSX.Element => {

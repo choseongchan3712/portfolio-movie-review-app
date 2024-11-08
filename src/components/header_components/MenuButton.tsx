@@ -20,6 +20,21 @@ const Container = styled.div`
     font-size: ${fontSize.pcTitle};
     font-weight: ${fontweight.pcBasic};
   }
+  @media screen and (max-width: 1024px){
+    a {
+      font-size: ${fontSize.tablet1Title};
+    }
+  }
+  @media screen and (max-width: 640px){
+    a {
+      font-size: ${fontSize.tablet2Title};
+    }
+  }
+  @media screen and (max-width: 320px){
+    a {
+      font-size: ${fontSize.mobileTitle};
+    }
+  }
 `;
 
 const MenuButton = ({ title }: any): JSX.Element => {

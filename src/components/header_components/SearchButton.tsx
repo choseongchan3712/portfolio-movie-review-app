@@ -16,6 +16,9 @@ const Container = styled.div`
     text-decoration: none;
     color: #fff;
   }
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const SearchButton = (): JSX.Element => {

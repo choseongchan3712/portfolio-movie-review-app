@@ -9,6 +9,9 @@ const Container = styled.div`
   &:hover div:nth-child(2) {
     transform: scale(1);
   }
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const Category = (): JSX.Element => {

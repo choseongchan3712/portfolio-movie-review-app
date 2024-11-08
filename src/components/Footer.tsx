@@ -1,5 +1,5 @@
 const Footer = ():JSX.Element => {
-  return <div>footer</div>;
+  return <div></div>;
 };
 
 export default Footer;

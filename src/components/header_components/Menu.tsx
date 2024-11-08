@@ -7,6 +7,10 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 370px) {
+    width: 100%;
+    justify-content: flex-start;
+  }
 `;
 
 const dataList: string[] = ["TV", "영화", "키즈"];

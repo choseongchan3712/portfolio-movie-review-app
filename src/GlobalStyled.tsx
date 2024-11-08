@@ -3,6 +3,8 @@ import reset from "styled-reset";
 
 interface PaddingStyle {
   pcPadding: string;
+  tebletPadding:string;
+  mobilePadding:string;
   buttonPadding: string;
   subButtonPadding: string;
 }
@@ -21,6 +23,9 @@ interface FontSize {
   pcLarge: string;
   pcHeadline: string;
   pcTitle: string;
+  tablet1Title:string;
+  tablet2Title:string;
+  mobileTitle: string;
   pcLabel: string;
 }
 
@@ -31,6 +36,8 @@ interface FontWeight {
 
 export const paddingStyle: PaddingStyle = {
   pcPadding: "40px",
+  tebletPadding: "15px",
+  mobilePadding: "10px",
   buttonPadding: "12px 15px",
   subButtonPadding: "8px 8px",
 };
@@ -49,6 +56,9 @@ export const fontSize: FontSize = {
   pcLarge: "62px",
   pcHeadline: "30px",
   pcTitle: "18px",
+  tablet1Title: "16px",
+  tablet2Title: "14px",
+  mobileTitle: "14px",
   pcLabel: "15px",
 };
 
