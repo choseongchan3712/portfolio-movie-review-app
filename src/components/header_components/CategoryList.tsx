@@ -6,33 +6,7 @@ import {
   fontweight,
   paddingStyle,
 } from "../../GlobalStyled";
-
-const list: string[] = [
-  "드라마",
-  "한국영화",
-  "예능",
-  "한국 TV 프로그램",
-  "영문 자막",
-  "로맨스",
-  "코미디",
-  "외국 TV 프로그램",
-  "미스터리",
-  "어드벤처",
-  "공포",
-  "범죄",
-  "키즈",
-  "외국 영화",
-  "액션",
-  "스릴러",
-  "무협",
-  "오컬트",
-  "애니메이션",
-  "판타지",
-  "SF",
-  "가족",
-  "다큐멘터리",
-  "성인",
-];
+import { mainList } from "../../list/categoryList";
 
 const Container = styled.div`
   position: absolute;
@@ -64,7 +38,7 @@ const Container = styled.div`
 const CategoryList = (): JSX.Element => {
   return (
     <Container>
-      {list.map((data: string, index: number) => (
+      {mainList.map((data: string, index: number) => (
         <Link to={"#"} key={index}>
           {data}
         </Link>
