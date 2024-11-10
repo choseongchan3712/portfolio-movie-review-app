@@ -56,7 +56,7 @@ const Container = styled.div`
   .swiper-button-prev {
     position: absolute;
     z-index: 2;
-    top: 670px;
+    top: 85%;
     left: 100px;
     width: 50px;
     height: 50px;
@@ -78,7 +78,7 @@ const Container = styled.div`
   .swiper-button-next {
     position: absolute;
     z-index: 2;
-    top: 670px;
+    top: 85%;
     left: 250px;
     width: 50px;
     height: 50px;
@@ -102,7 +102,7 @@ const Container = styled.div`
     z-index: 2;
     width: auto;
     height: auto;
-    top: 663px;
+    top: 84%;
     left: 175px;
     color: ${colorStyle.pointColor};
     font-size: ${fontSize.pcTitle};

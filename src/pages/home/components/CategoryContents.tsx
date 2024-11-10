@@ -3,10 +3,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { mainList } from "../../../list/categoryList";
 import styled from "styled-components";
-import { paddingStyle } from "../../../GlobalStyled";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useRef, useState } from "react";
+// import { paddingStyle } from "../../../GlobalStyled";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+// import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
