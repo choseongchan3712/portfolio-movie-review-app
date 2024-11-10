@@ -3,6 +3,7 @@ import Banner from "./components/Banner";
 import Contents from "./components/Contents";
 import CategoryContents from "./components/CategoryContents";
 import TopContents from "./components/TopContents";
+import DramaContents from "./components/DramaContents";
 
 const Container = styled.div`
   position: relative;
@@ -22,6 +23,8 @@ const Home = (): JSX.Element => {
       <Contents title="이번 주 인기작 TOP 20">
         <TopContents />
       </Contents>
+
+      <DramaContents />
     </Container>
   );
 };
