@@ -6,7 +6,7 @@
 [x] npm i react-spinners
 [x] swiper
 [x] font-awesome
-[] npm i react-hook-form
+[x] npm i react-hook-form
 [] helmet-async
 
 # Work list

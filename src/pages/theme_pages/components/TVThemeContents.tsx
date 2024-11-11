@@ -16,7 +16,7 @@ const TVThemeContents = ({ list, title }: ListProps): JSX.Element => {
       <ThemeContents themeTile={title}>
         {list.map((data, index) => (
           <SwiperSlide key={index}>
-            <ThemeBox link="#" />
+            <ThemeBox link="/detail/test" />
           </SwiperSlide>
         ))}
       </ThemeContents>

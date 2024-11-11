@@ -15,7 +15,7 @@ a {
 
 const SubContents = ():JSX.Element => {
   return <Container>
-    <Link to={'#'}></Link>
+    <Link to={'/detail/test'}></Link>
   </Container>;
 };
 

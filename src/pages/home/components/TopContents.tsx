@@ -77,7 +77,7 @@ const TopContents = (): JSX.Element => {
       >
         {testNum.map((data: number, index: number) => (
           <SwiperSlide key={index}>
-            <TopBox num={data} link="#" />
+            <TopBox num={data} link="/detail/test" />
           </SwiperSlide>
         ))}
       </Swiper>
