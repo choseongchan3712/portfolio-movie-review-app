@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import BannerContents from "./banner_components/BannerContents";
-import { colorStyle, fontSize, fontweight } from "../../../GlobalStyled";
+import { colorStyle, fontSize, fontweight } from "../../GlobalStyled";
 
 const Container = styled.div`
   margin-top: 70px;
@@ -113,7 +113,11 @@ const Container = styled.div`
   }
 `;
 
-const Banner = (): JSX.Element => {
+interface listProps {
+  list: number[];
+}
+
+const Banner = ({list}:listProps): JSX.Element => {
   return (
     <Container>
       <>
@@ -144,42 +148,15 @@ const Banner = (): JSX.Element => {
             0: {
               slidesPerView: 1.2,
               spaceBetween: 10,
-            }
+            },
           }}
         >
-          <SwiperSlide>
+
+          {list.map((data, index)=>(
+            <SwiperSlide key={index}>
             <BannerContents />
           </SwiperSlide>
-          <SwiperSlide>
-            <BannerContents />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BannerContents />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BannerContents />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BannerContents />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BannerContents />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BannerContents />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BannerContents />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BannerContents />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BannerContents />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BannerContents />
-          </SwiperSlide>
+          ))}
         </Swiper>
       </>
     </Container>

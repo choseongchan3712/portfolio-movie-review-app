@@ -5,6 +5,9 @@ import Home from "./pages/home/Home";
 import Search from "./pages/search/Search";
 import Detail from "./pages/detail/Detail";
 import PageNotFound from "./pages/PageNotFound";
+import TVPages from "./pages/theme_pages/TVPages";
+import MoviePages from "./pages/theme_pages/MoviePages";
+import KidsPages from "./pages/theme_pages/KidsPages";
 
 const Router = ():JSX.Element => {
   return (
@@ -14,6 +17,9 @@ const Router = ():JSX.Element => {
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
         <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/TV" element={<TVPages />} />
+        <Route path="/영화" element={<MoviePages />} />
+        <Route path="/키즈" element={<KidsPages />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />

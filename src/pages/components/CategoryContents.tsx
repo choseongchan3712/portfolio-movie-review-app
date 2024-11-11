@@ -1,7 +1,6 @@
-import Button from "../../../components/Button";
+import Button from "../../components/Button";
 import "swiper/css";
 import "swiper/css/navigation";
-import { mainList } from "../../../list/categoryList";
 import styled from "styled-components";
 // import { paddingStyle } from "../../../GlobalStyled";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -31,14 +30,14 @@ const Container = styled.div`
     transform: translateY(-50%);
     border-radius: 35px;
     background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter:blur(8px);
+    backdrop-filter: blur(8px);
     &:after {
       font-size: 17px;
       font-weight: 900;
       color: black;
     }
   }
-  
+
   .swiper-button-next {
     width: 35px;
     height: 35px;
@@ -50,7 +49,7 @@ const Container = styled.div`
     transform: translateY(-50%);
     border-radius: 35px;
     background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter:blur(8px);
+    backdrop-filter: blur(8px);
     &:after {
       font-size: 17px;
       font-weight: 900;
@@ -120,8 +119,11 @@ const Container = styled.div`
 //   border-radius: 35px;
 //   backdrop-filter: blur(5px);
 // `;
+interface ListProps {
+  list: string[];
+}
 
-const CategoryContents = (): JSX.Element => {
+const CategoryContents = ({ list }: ListProps): JSX.Element => {
   // const slideRef = useRef<HTMLDivElement | null>(null); //!
   // const preRef = useRef<HTMLDivElement | null>(null);
   // const nextRef = useRef<HTMLDivElement | null>(null);
@@ -176,7 +178,7 @@ const CategoryContents = (): JSX.Element => {
         slidesPerView="auto"
         spaceBetween={10}
       >
-        {mainList.map((data, index) => (
+        {list.map((data, index) => (
           <SwiperSlide key={index}>
             <Button link="#" text={data} />
           </SwiperSlide>
