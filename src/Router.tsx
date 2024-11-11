@@ -8,8 +8,9 @@ import PageNotFound from "./pages/PageNotFound";
 import TVPages from "./pages/theme_pages/TVPages";
 import MoviePages from "./pages/theme_pages/MoviePages";
 import KidsPages from "./pages/theme_pages/KidsPages";
+import Sub from "./pages/sub/Sub";
 
-const Router = ():JSX.Element => {
+const Router = (): JSX.Element => {
   return (
     <HashRouter>
       <Header />
@@ -17,6 +18,7 @@ const Router = ():JSX.Element => {
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
         <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/sub/:id" element={<Sub />} />
         <Route path="/TV" element={<TVPages />} />
         <Route path="/영화" element={<MoviePages />} />
         <Route path="/키즈" element={<KidsPages />} />

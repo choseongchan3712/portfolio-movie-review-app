@@ -6,7 +6,6 @@ import {
   fontweight,
   paddingStyle,
 } from "../../GlobalStyled";
-import { mainList } from "../../list/categoryList";
 
 const Container = styled.div`
   position: absolute;
@@ -35,10 +34,14 @@ const Container = styled.div`
   }
 `;
 
-const CategoryList = (): JSX.Element => {
+interface ListProps {
+  list: string[];
+}
+
+const CategoryList = ({list}: ListProps): JSX.Element => {
   return (
     <Container>
-      {mainList.map((data: string, index: number) => (
+      {list.map((data: string, index: number) => (
         <Link to={"#"} key={index}>
           {data}
         </Link>

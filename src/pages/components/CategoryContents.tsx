@@ -180,7 +180,7 @@ const CategoryContents = ({ list }: ListProps): JSX.Element => {
       >
         {list.map((data, index) => (
           <SwiperSlide key={index}>
-            <Button link="#" text={data} />
+            <Button link={`/sub/${data}`} text={data} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import {
   colorStyle,
@@ -6,6 +6,7 @@ import {
   fontweight,
   paddingStyle,
 } from "../../GlobalStyled";
+import { useRef } from "react";
 
 const Container = styled.div`
   margin-right: 10px;
@@ -35,6 +36,14 @@ const Container = styled.div`
       font-size: ${fontSize.mobileTitle};
     }
   }
+
+  &.button_active {
+    background-color: ${colorStyle.subButtonColor};
+  }
+
+  a.link_active {
+    border-bottom: 2px solid #fff;
+  }
 `;
 
 interface titleProps {
@@ -42,9 +51,45 @@ interface titleProps {
 }
 
 const MenuButton = ({ title }: titleProps): JSX.Element => {
+  const location = useLocation();
+  const buttonRef = useRef<HTMLDivElement>(null); //!
+  const linkRef = useRef<HTMLAnchorElement>(null);
+  console.log(location.pathname);
+
+  if (location.pathname === "/TV") {
+    if (buttonRef.current?.classList.contains("TV") && linkRef.current) { //!
+      buttonRef.current.classList.add('button_active');
+      linkRef.current.classList.add('link_active');
+    } else if ((buttonRef.current?.classList.contains("영화") || buttonRef.current?.classList.contains("키즈")) && linkRef.current){
+      buttonRef.current.classList.remove('button_active');
+      linkRef.current.classList.remove('link_active');
+    }
+  } else if (location.pathname === "/%EC%98%81%ED%99%94") {
+    if (buttonRef.current?.classList.contains("영화") && linkRef.current) { //!
+      buttonRef.current.classList.add('button_active');
+      linkRef.current.classList.add('link_active');
+    } else if ((buttonRef.current?.classList.contains("TV") || buttonRef.current?.classList.contains("키즈")) && linkRef.current){
+      buttonRef.current.classList.remove('button_active');
+      linkRef.current.classList.remove('link_active');
+    }
+  } else if (location.pathname === "/%ED%82%A4%EC%A6%88") {
+    if (buttonRef.current?.classList.contains("키즈") && linkRef.current) { //!
+      buttonRef.current.classList.add('button_active');
+      linkRef.current.classList.add('link_active');
+    } else if ((buttonRef.current?.classList.contains("TV") || buttonRef.current?.classList.contains("영화")) && linkRef.current){
+      buttonRef.current.classList.remove('button_active');
+      linkRef.current.classList.remove('link_active');
+    }
+  } else if ((location.pathname !== "/TV" && location.pathname !== "/%EC%98%81%ED%99%94" && location.pathname !== "/%ED%82%A4%EC%A6%88") && (buttonRef.current && linkRef.current)){
+    buttonRef.current.classList.remove('button_active');
+    linkRef.current.classList.remove('link_active');
+  }
+
   return (
-    <Container>
-      <Link to={`/${title}`}>{title}</Link>
+    <Container ref={buttonRef} className={title}>
+      <Link to={`/${title}`} ref={linkRef}>
+        {title}
+      </Link>
     </Container>
   );
 };

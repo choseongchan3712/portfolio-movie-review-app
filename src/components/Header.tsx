@@ -18,6 +18,7 @@ const Container = styled.div`
   padding: 0 ${paddingStyle.pcPadding};
   z-index: 990;
   height: 70px;
+  background-color: #000;
   @media screen and (max-width: 1024px){
     padding: 0 ${paddingStyle.tebletPadding};
     height: 50px;
@@ -57,6 +58,8 @@ const RightWrap = styled.div`
 `;
 
 const Header = (): JSX.Element => {
+  
+
   return (
     <Container>
       <LeftWrap>
